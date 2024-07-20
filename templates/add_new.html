@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #170d0d; /* Замените значение на нужный вам цвет */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #170d0d;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            color: #fff;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #555;
+            background-color: transparent;
+            color: #fff;
+            border-radius: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .login-container input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        .register-link {
+            margin-top: 10px;
+            color: #ccc;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .register-link:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h2>Login Form</h2>
+    <form action="#" method="post"> <!-- Указываем action="#" чтобы форма не отправляла данные на сервер -->
+        <input type="text" name="username" placeholder="Username" required>
+        <br>
+        <input type="password" name="password" placeholder="Password" required>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+    <a href="#" class="register-link">Регистрация</a>
+</div>
+</body>
+</html>

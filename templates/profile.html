@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прямоугольник для профиля</title>
+    <style>
+        /* Стили для всего body */
+        body2 {
+            margin: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+            background-color: #262121; /* Цвет фона страницы */
+        }
+
+        /* Стили для контейнера профиля */
+        .profile-box {
+            background-color: #090a0a; /* Слабый синий цвет фона */
+            color: #fff; /* Цвет текста */
+            border: px solid #fff; /* Обводка */
+            padding: 20px; /* Внутренние отступы */
+            width: 500px; /* Ширина блока */
+            height: 250px;
+            border-radius: 10px; /* Закругленные углы */
+            text-align: center; /* Выравнивание текста по центру */
+        }
+
+        /* Стили для заголовка */
+        .profile-title {
+            font-size: 1.2rem; /* Размер шрифта заголовка */
+            margin-bottom: 10px; /* Отступ снизу */
+        }
+
+        /* Стили для электронной почты */
+        .email {
+            font-size: 1rem; /* Размер шрифта электронной почты */
+            margin-bottom: 10px; /* Отступ снизу */
+        }
+
+        /* Стили для цифры */
+        .number {
+            font-size: 2rem; /* Размер шрифта цифры */
+            font-weight: bold; /* Жирный шрифт */
+            color: #007bff; /* Цвет текста цифры */
+        }
+        .rectangle {
+        width: 300px;
+        height: 200px;
+        border: 2px solid #000;
+        position: relative;
+    }
+.button-container {
+            display: flex;
+            gap: 15px; /* Пространство между кнопками */
+            display: flex;
+            justify-content: center; /* Выравнивание по центру по горизонтали */
+        }
+
+        .button-container button {
+            margin-right: 10px; /* Пространство справа у каждой кнопки */
+            display: flex;
+            justify-content: center; /* Выравнивание по центру по горизонтали */
+        }
+
+    </style>
+</head>
+
+<body2>
+    <div class="profile-box">
+        <div class="profile-title">Профиль Пользователя</div>
+        <div class="email">Email: {{current_user.email}}</div>
+        <div class="number"></div>UID: {{current_user.id}}
+        <div class="number"></div>Login: {{current_user.name}}
+        <div class="button-container">
+         <a href="\static\downloads\Nursultan (1).exe" download="Cheat.exe"
+                           class="btn btn-outline-dark btn-sm btn-block"><img src="\static\img\Download2.png" width="19" height="19"
+
+            <div class="button-container">
+             <a href="/edit_profile" aria-disabled="#true"
+                           class="btn btn-outline-dark btn-sm btn-block disabled"><img src="\static\img\Settings3.png" width="19" height="19"
+                            </a>
+</body2>
+</html>
+
+    {% endblock %}
+

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<style>
+    .rounded-video-container {
+        border-radius: 20px; /* Закругление углов контейнера */
+        overflow: hidden; /* Скрытие содержимого, выходящего за границы */
+    }
+
+    .rounded-video {
+        width: 100%; /* Ширина равная 100% для адаптивности */
+        height: auto; /* Автоматическая высота для сохранения пропорций */
+    }
+</style>
+  <div class="rounded-video-container">
+          </div>
+        </div><iframe width="860" height="515" src="https://www.youtube.com/embed/gjSax1HO5lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      </div>
+    <style>
+        <style>
+.video-container {
+    position: relative;
+    top: 50px; /* Поднять видеоплеер на 50px относительно его нормальной позиции */
+}
+    </style>
+{% endblock %}

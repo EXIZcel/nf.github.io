@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Анимированный прямоугольник с блюром</title>
+<style>
+  body5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Убираем отступы по умолчанию */
+    padding-bottom: 5rem; /* Отступ внизу body */
+  }
+
+  .rectangle5 {
+    width: 200px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный белый цвет */
+    backdrop-filter: blur(10px); /* Блюр заднего фона */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Плавное изменение при наведении */
+    margin-bottom: 5rem; /* Отступ внизу прямоугольника */
+
+}
+  }
+
+  .rectangle:hover {
+    transform: translateY(-10px); /* Прыжок вверх на 10px при наведении */
+  }
+
+
+</style>
+  <style>
+    /* Общие стили */
+
+  /* Пример медиа-запроса для мобильных устройств */
+  @media (max-width: 768px) {
+    /* Стили для мобильных устройств */
+    .header {
+      padding: 10px;
+    }
+
+    .menu {
+      display: none; /* Скрыть основное меню на маленьких экранах */
+    }
+
+    .burger-menu {
+      display: block; /* Показать бургер-меню на маленьких экранах */
+    }
+
+    /* Другие стили для мобильных устройств */
+  }
+  </style>
+</head>
+<body>
+
+<div class="rectangle5">
+  Прямоугольник с блюром
+</div>
+
+</body>
+</html>
+
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<main>
+    <div class="mx-auto p-2">
+    <h1>Пользователи</h1>
+     <table>
+         {% for user in users %}
+         <tr>
+              <td style="background-color: lightgrey">
+                  <a href="/profile/{{user.id}}">
+                      <img src="static\img{% if user.image %}{{ user.image }}/{% else %}{{default_user_avatar}} {% endif %}"
+                           width="100"
+                           height="100">
+                  </a>
+              </td>
+              <td style="background-color: lightgrey"><h1>{{user.name}}</h1>
+              </td>
+         </tr>
+             {% endfor %}
+              </li>
+     </table>
+    </div>
+</main>
+<link rel="stylesheet" type="text/css" href="style.css">
+<footer style="background-color: #000000; padding: 20px;">
+    <div style="display: flex; justify-content: space-around;">
+        <a href="" style="">
+            <div style="border-radius: 60%; background-color: #333; width: 50px; height: 50px;">
+            </div>
+        </a>
+
+        <a href="" style="text-decoration: none;">
+            <div style="border-radius: 50%; background-color: ; width: 50px; height: 50px;"></div>
+        </a>
+        <style>
+        body {
+            background-color: #f0f0f0; /* Замените значение на нужный вам цвет */
+        }
+    </style>
+    </div>
+    <p style="text-align: center; margin-top: 10px;">По всем вопросам, пишите на почту.
+exxiizz27@gmail.com (ПН-ПТ 10:00-18:00 МСК)</p>
+</footer>
+<style>
+        body {
+            background-color: #333333; /* Замените значение на нужный вам цвет */
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div>
+                    </form>
+                <form action="/add_new" method="post">
+        <input type="submit" value="Добавить Новость"
+                           class="btn btn-danger"></input>
+    </form>
+
+
+<style>
+        body {
+            background-color: #170d0d;
+        }
+.white-button {
+    background-color: white;
+    /* Дополнительные стили, если нужно */
+}
+    .button {
+    text-align: center; /* Центрируем содержимое по горизонтали */
+}
+    </style>
+
+{% endblock %}
